@@ -17,43 +17,18 @@ Personal AI desktop assistant with voice interaction, multi-LLM support, screen 
   
 ## Quick Start  
   
-\`\`\`bash  
+  
 git clone https://github.com/darkgaming10008-stack/ORTHOS-PRO-v0.1.git  
 cd ORTHOS-PRO-v0.1  
 pip install -r requirements.txt  
 python main.py  
-\`\`\`  
+
   
-Or install as a package:  
   
-\`\`\`bash  
-pip install -e ".[dev]"  
-\`\`\`  
   
-## Project Structure  
+
   
-\`\`\`  
-.  
-|-- main.py              # Entry point  
-|-- ui.py                # PyQt6 GUI (HUD, chat, setup)  
-|-- core/                # Core library (LLM, TTS, STT, security, observability)  
-|-- actions/             # LLM-callable tool actions  
-|-- memory/              # Memory system (ChromaDB, SQLite, knowledge graph)  
-|-- gateway/             # Multi-platform messaging gateway  
-|-- agent/               # Agent subsystem (planner, executor, task queue)  
-|-- config/              # Configuration files  
-|-- tests/               # Test suite  
-|-- assets/              # Static assets  
-|-- models/              # Model artifacts  
-\`\`\`  
-  
-## Configuration  
-  
-1. Copy .env.example to .env  
-2. Fill in your API keys  
-3. Or edit config/api_keys.json directly  
-  
-See .env.example for all available options.  
+ 
   
 ## License  
   
