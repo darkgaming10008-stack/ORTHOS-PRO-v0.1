@@ -1,5 +1,4 @@
-ECHO is on.
-> Not just an AI, but a digital extension of the human will.  
+Not just an AI, but a digital extension of the human will.  
   
 Personal AI desktop assistant with voice interaction, multi-LLM support, screen vision, and PyQt6 HUD.  
   
