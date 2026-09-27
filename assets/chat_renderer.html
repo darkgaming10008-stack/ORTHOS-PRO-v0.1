@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="vendor/katex/contrib/auto-render.min.js"></script>
+  <script src="vendor/marked/marked.min.js"></script>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; background: #010d14; color: #c8f6ff;
+      font: 13px/1.55 Inter, Segoe UI, Arial, sans-serif; }
+    #content { height: 100%; overflow: auto; padding: 10px 12px; scrollbar-color: #1a5c7a #00060a; }
+    #content:empty::before { content: 'Start a conversation with Orthos'; color: #3a8a9a;
+      font: 12px Consolas, monospace; }
+    article { margin: 0 0 14px; overflow-wrap: anywhere; }
+    .prefix { display: block; margin: 0 0 4px; font: 700 11px/1.2 Consolas, monospace; letter-spacing: .03em; }
+    .prefix-you { color: #d8f8ff; } .prefix-ai { color: #00d4ff; } .prefix-sys { color: #ffcc00; }
+    .prefix-err { color: #ff3355; } .prefix-file { color: #00ff88; }
+    .message-body { min-width: 0; } .message-body > :first-child { margin-top: 0; }
+    .message-body > :last-child { margin-bottom: 0; }
+    p { margin: 7px 0; } strong { color: #fff; } em { color: #ffcf66; }
+    h1, h2, h3, h4 { color: #65e5ff; margin: 15px 0 7px; line-height: 1.25; }
+    h1 { font-size: 1.35em; } h2 { font-size: 1.2em; } h3 { font-size: 1.08em; }
+    ul, ol { margin: 7px 0; padding-left: 22px; } li { margin: 3px 0; }
+    code { padding: 2px 5px; border-radius: 4px; background: #001d29; color: #7dffc4;
+      font: .93em Consolas, 'Courier New', monospace; }
+    pre { margin: 9px 0; padding: 10px; overflow: auto; border: 1px solid #0d4058;
+      border-radius: 6px; background: #000911; } pre code { padding: 0; background: transparent; color: #c8f6ff; }
+    blockquote { margin: 9px 0; padding: 3px 0 3px 12px; border-left: 3px solid #00a9cf; color: #8ed6e5; }
+    table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 9px 0; }
+    th, td { padding: 5px 8px; border: 1px solid #15516b; } th { color: #70e6ff; background: #011926; }
+    a { color: #56dfff; } hr { border: 0; border-top: 1px solid #15516b; margin: 14px 0; }
+    .katex-display { overflow-x: auto; overflow-y: hidden; margin: 11px 0; color: #fff; }
+  </style>
+</head>
+<body>
+  <main id="content" aria-live="polite"></main>
+  <script>
+    function escapeHtml(value) {
+      return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+    function renderMessages(messages) {
+      const content = document.getElementById('content');
+      const nearBottom = content.scrollHeight - content.scrollTop - content.clientHeight < 32;
+      content.innerHTML = messages.map(message => {
+        let body;
+        try { body = marked.parse(escapeHtml(message.body || ''), { gfm: true, breaks: true }); }
+        catch (_) { body = '<p>' + escapeHtml(message.body || '') + '</p>'; }
+        const prefix = message.prefix
+          ? '<span class="prefix prefix-' + escapeHtml(message.tag) + '">' + escapeHtml(message.prefix) + '</span>'
+          : '';
+        return '<article class="message message-' + escapeHtml(message.tag) + '">' + prefix
+          + '<div class="message-body">' + body + '</div></article>';
+      }).join('');
+      renderMathInElement(content, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false }, { left: '\\[', right: '\\]', display: true }
+        ], throwOnError: false, trust: false, strict: false
+      });
+      if (nearBottom) content.scrollTop = content.scrollHeight;
+    }
+  </script>
+</body>
+</html>

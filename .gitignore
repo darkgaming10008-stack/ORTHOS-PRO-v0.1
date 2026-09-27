@@ -1,0 +1,78 @@
+# ── Python ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Environment & secrets ──────────────────────────────────────────────
+.env
+.env.*
+config/api_keys.json
+config/telegram_config.json
+config/oauth_tokens/
+
+# ── Virtual environments ───────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── IDE / Editor ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS generated ───────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ── Runtime data ───────────────────────────────────────────────────────
+logs/
+*.db
+!tests/**/*.db
+
+# ── Model artifacts ────────────────────────────────────────────────────
+*.onnx
+models/.cache/
+
+# ── Tool state directories ─────────────────────────────────────────────
+.opencode/
+.perch/
+.freebuff/
+.playwright-mcp/
+.chrome-pids.json
+
+# ── Pytest ─────────────────────────────────────────────────────────────
+.pytest_cache/
+
+# ── ChromaDB ───────────────────────────────────────────────────────────
+memory/chroma_db/
+
+# ── Memory runtime data ────────────────────────────────────────────────
+memory/conversations/
+memory/compressed/
+memory/captures/
+memory/dream_data/
+memory/*.db
+memory/.vector_index.npy
+memory/.vector_meta.json
+memory/entities.json
+memory/knowledge_graph.json
+memory/ctx_cache.json
+
+# ── MCP backups ────────────────────────────────────────────────────────
+config/mcp_backups/
+config/telegram_downloads/
+config/.bot_state.json
+config/.vault_test.json
+
+# ── WhatsApp sessions ──────────────────────────────────────────────────
+whatsapp-sessions/
+
+# ── Misc ───────────────────────────────────────────────────────────────
+*.log

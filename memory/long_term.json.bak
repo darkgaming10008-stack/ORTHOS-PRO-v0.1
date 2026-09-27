@@ -1,0 +1,522 @@
+{
+  "identity": {
+    "name": {
+      "value": "Ankur",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "user_correction",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "assistant_name": {
+      "value": "Alex",
+      "updated": "2026-06-23",
+      "score": 8.093700525984088,
+      "access_count": 73
+    },
+    "location": {
+      "value": "Seattle, WA",
+      "updated": "2026-06-28",
+      "history": [
+        {
+          "value": "Seattle, WA",
+          "updated": "2026-06-23"
+        },
+        {
+          "value": "Seattle, WA",
+          "updated": "2026-06-23"
+        }
+      ],
+      "source": "eval_test",
+      "score": 1.2000000000000002,
+      "access_count": 2,
+      "contradictions": [
+        {
+          "old_value": "Seattle, WA",
+          "new_value": "Gwalior, India",
+          "old_score": 1.1,
+          "detected": "2026-06-28"
+        }
+      ]
+    },
+    "git_test": {
+      "value": "works",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "core_memory",
+      "score": 4.300000000000002,
+      "access_count": 33
+    },
+    "git_test2": {
+      "value": "verify",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "core_memory",
+      "score": 4.300000000000002,
+      "access_count": 33
+    },
+    "education": {
+      "value": "BCA (Bachelor of Computer Applications), 1st year, Jiwaji University, Gwalior",
+      "updated": "2026-06-28",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "response_formatting": {
+      "value": "Keep sentences short for faster HTTPS streaming and natural TTS. Use paragraph spacing for readability. Strictly avoid using asterisks, hashtags, bullet points, or emojis, as edge-tts cannot pronounce them naturally and it sounds robotic.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "moondream_3_coord_method": {
+      "value": "Use precise referring expressions for native grounding in Moondream 3 Preview to get accurate coordinates.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "screen_locate_model": {
+      "value": "screen_locate tool = moondream 3 preview model",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "screen_locate_protocol": {
+      "value": "Always use precise, detailed referring expressions for screen_locate to ensure accurate coordinates from Moondream 3 Preview.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "captcha_speed_requirement": {
+      "value": "Strict 5-second limit for solving captchas and responding.",
+      "updated": "2026-07-01",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "browser_control_preference": {
+      "value": "Strictly avoid using browser_control; it is considered useless.",
+      "updated": "2026-07-01",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "moondream_prompting_rules": {
+      "value": "Always provide precise, descriptive, and unambiguous prompts for screen_locate to avoid hallucinations in dense UI scenarios. Describe object features/location if similar elements exist.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "strict_no_coordinate_guessing": {
+      "value": "Never guess coordinates. Always use screen_locate to obtain accurate pixel values for interactions. Guessing is strictly prohibited to prevent errors and ensure precision.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "occupation": {
+      "value": "student",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "core_memory",
+      "score": 1.0,
+      "access_count": 0
+    }
+  },
+  "preferences": {
+    "computer_control_protocol": {
+      "value": "Priority approach for computer control: ALWAYS use a 'See -> Locate -> Act -> Verify' workflow. 1. Capture screen via screen_process. 2. Use the 10px coordinate grid to find precise coordinates. 3. Verify cursor focus before typing. 4. Post-execution, analyze screen again to verify the task was completed correctly. Never act blindly.",
+      "updated": "2026-06-23",
+      "score": 8.093700525984088,
+      "access_count": 73
+    },
+    "browser_control_protocol": {
+      "value": "Priority workflow for browser tasks: 1. Always use screen vision first to verify if the browser is open. 2. Use Playwright or other specialized browser tools for actions. 3. Execute tasks using integrated intelligence (brain) instead of blind tool calls.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "verification_strictness": {
+      "value": "User emphasizes strict adherence to the 'See -> Locate -> Act -> Verify' workflow. Never skip the verification step after executing a command.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "click_verification_protocol": {
+      "value": "ALWAYS verify after clicking. If the action failed, recalculate and retry up to 3 times. Do not consider the task complete until the visual result confirms success. Priority: High.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "strict_computer_control_protocol": {
+      "value": "Priority approach for computer control: ALWAYS use a 'See -> Locate -> Act -> Verify' workflow. 1. Capture screen via screen_process. 2. Use the 10px coordinate grid to find precise coordinates. 3. Verify cursor focus before typing. 4. Post-execution, analyze screen again to verify the task was completed correctly. Never act blindly. If a click fails, NEVER reuse the same coordinates; recalculate and retry up to 3 times.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "click_verification_strictness": {
+      "value": "User emphasizes strict adherence to the 'See -> Locate -> Act -> Verify' workflow. Never skip the verification step after executing a command. Priority: High.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "cursor_move_verify_protocol": {
+      "value": "Before clicking any element, always move the cursor to the coordinates first. Then, use screen_process to visually verify if the cursor is correctly positioned over the target element. If the cursor is misplaced, recalculate coordinates before clicking. Only execute the click after visual cursor verification.",
+      "updated": "2026-06-23",
+      "score": 8.112252396356224,
+      "access_count": 73
+    },
+    "cursor_verification_protocol": {
+      "value": "When verifying cursor position, if the position is incorrect, Jarvis must explicitly instruct the vision model to provide the correct coordinates along with the verification failure.",
+      "updated": "2026-06-23",
+      "score": 8.131237896142776,
+      "access_count": 73
+    },
+    "window_close_verification": {
+      "value": "ALWAYS verify if the specific target window is focused and active before executing a close command to prevent accidental closure of the wrong application.",
+      "updated": "2026-06-23",
+      "score": 8.131237896142776,
+      "access_count": 73
+    },
+    "window_close_protocol": {
+      "value": "To close a specific window: 1. Focus the target window by clicking it. 2. Use Alt+F4 to close it. 3. Visually verify after closing that the window is gone. This is the preferred method over clicking the 'X' button.",
+      "updated": "2026-06-23",
+      "score": 8.190898718140328,
+      "access_count": 73
+    },
+    "coordinate_calculation_protocol": {
+      "value": "If the screen_locate tool repeatedly provides the same incorrect coordinates, do not rely on it blindly. Instead, manually calculate coordinates based on visual analysis of the screenshot.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "preferred_window_close_method": {
+      "value": "To close a particular window: 1. Focus the target window. 2. Use Alt+F4 to close it. 3. Visually verify after closing that the window is gone. This is the preferred method over clicking the 'X' button.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "scroll_verification_protocol": {
+      "value": "Priority workflow for scrolling: 1. Capture screen via screen_process to see current position. 2. Execute scroll action. 3. Wait for 2 seconds to allow the UI to update. 4. Capture screen again via screen_process to verify if the content has actually scrolled.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "window_focus_method": {
+      "value": "The 'focus_window' tool is unreliable as it doesn't guarantee OS-level focus. From now on, ALWAYS focus windows by using the 'Click to Focus' method: locate the window, move cursor, visually verify position via screen_process, and then click. This is the only verified way to ensure a window is active.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "verification_delay": {
+      "value": "Wait for exactly 3 seconds after executing an action before calling screen_process for verification to ensure the UI has updated and the screenshot is accurate.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "verification_delay_protocol": {
+      "value": "Wait for 5 seconds after executing any action before calling screen_process for verification to ensure the UI has fully updated.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "relationship_dynamic": {
+      "value": "The user wants Jarvis to behave like a friend rather than an employee. While technical protocols and operational precision remain strict, the communication style should be casual, friendly, and less formal.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "computer_control_workflow_optimization": {
+      "value": "Execute the 'See -> Locate -> Move -> Verify' sequence in a single chain without waiting for user prompts at each step, but ALWAYS ask for permission before the final 'Click/Act' step.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "verification_delay_protocol_extended": {
+      "value": "Wait for 10 seconds after executing an action before calling screen_process for verification, especially when loading content like YouTube videos, to ensure the UI has fully updated.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "unigram_open_method": {
+      "value": "Never use hotkeys or typing 'unigram' then enter to open Unigram, as this method does not work. Always use the open_app tool or a direct launch method.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "unigram_open_method_win_r": {
+      "value": "To open Unigram, use Win+R, type 'Telegram.exe', and then press Enter.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "unigram_open_wait_time": {
+      "value": "Always wait for 20 seconds after attempting to open Unigram to ensure it has fully loaded before verifying.",
+      "updated": "2026-06-23",
+      "score": 8.150667160950844,
+      "access_count": 73
+    },
+    "no_emojis_for_tts": {
+      "value": "Never use emojis in responses because edge-tts cannot pronounce them and it sounds strange. Instead, use words or appropriate symbols to convey emotion so that the output sounds natural and human-like.",
+      "updated": "2026-06-23",
+      "score": 8.170550563296112,
+      "access_count": 73
+    },
+    "response_formatting": {
+      "value": "Keep sentences short for faster HTTPS streaming and natural TTS. Use paragraph spacing for readability. Strictly follow the 'See -> Locate -> Move -> Verify -> Act -> Wait -> Verify' workflow for computer control. Never skip window focus (Click to Focus) or the post-action wait time (up to 20s) before visual verification.",
+      "updated": "2026-06-23",
+      "score": 8.190898718140328,
+      "access_count": 73
+    },
+    "computer_control_workflow": {
+      "value": "Strictly follow the 'See -> Locate -> Move -> Verify -> Act -> Wait -> Verify' workflow. 1. Use screen_process to see. 2. Use screen_locate for coordinates. 3. Move cursor and verify position via screen_process. 4. Click to Focus the window. 5. Execute Action (e.g., Alt+F4). 6. Wait 20 seconds for UI update. 7. Final visual verification via screen_process.",
+      "updated": "2026-06-23",
+      "score": 8.190898718140328,
+      "access_count": 73
+    },
+    "language": {
+      "value": "TypeScript",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "manual",
+      "score": 8.299999999999988,
+      "access_count": 73
+    },
+    "favorite_color": {
+      "value": "teal",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "eval_test",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "programming_language": {
+      "value": "Python",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "eval_test",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "hotkey_close_protocol": {
+      "value": "ALWAYS use the 'hotkey' action (e.g., 'alt+f4') instead of separate 'press' actions for keyboard shortcuts when closing windows. After closing, ALWAYS verify visually using screen_process to confirm the window is actually gone before declaring success.",
+      "updated": "2026-06-26",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "screen_locate_model": {
+      "value": "The screen_locate tool uses the Moondream 3 Preview model for understanding and grounding.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "captcha_solving_speed": {
+      "value": "Must solve captchas and respond in under 5 seconds.",
+      "updated": "2026-07-01",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "browser_control_preference": {
+      "value": "Do not use browser_control as it is considered useless. Avoid this tool for all web tasks.",
+      "updated": "2026-07-01",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "moondream_prompting_strategy": {
+      "value": "Jab bhi moondream (screen_locate) use karna ho, prompt ko highly specific aur unambiguous rakhna hai. Agar screen par zyada ek jaise text ya symbols hain, toh context add karo (e.g., 'button labeled X in the top right corner') taaki hallucination na ho aur exact object locate ho sake.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "no_coordinate_guessing": {
+      "value": "Never guess coordinates for any interaction. Always use screen_locate to get precise, verified coordinates for any UI element before interacting. If screen_locate fails, do not proceed with blind guessing; recalculate or request manual guidance.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    }
+  },
+  "projects": {
+    "current_project": {
+      "value": "Alex - an AI assistant that can control a whole PC and work on a computer like a human does. Essentially building an AI agent (me!) with full computer control capabilities including screen vision, mouse/keyboard control, browser automation, file management, and task execution.",
+      "updated": "2026-06-28",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "shopify_project_details": {
+      "value": "We are building a custom Shopify theme from scratch. This is a core ongoing project.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    }
+  },
+  "relationships": {
+    "user_friendly_greeting_style": {
+      "value": "The user uses friendly greetings like \"hi bro\" and \"how r u buddy\"",
+      "updated": "2026-07-14",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    }
+  },
+  "wishes": {
+    "travel_destination": {
+      "value": "Galapagos Islands",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "eval_test",
+      "score": 1.0,
+      "access_count": 0
+    }
+  },
+  "notes": {},
+  "procedures": {
+    "click_verify": {
+      "value": "Always verify with screen_process after clicking",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "manual"
+    },
+    "morning_routine": {
+      "value": "walk dog, make coffee, check email, plan day",
+      "updated": "2026-06-23",
+      "history": [],
+      "source": "eval_test",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "tool_priority_for_coordinates": {
+      "value": "For finding element coordinates on screen, ALWAYS follow this priority: 1) screen_locate FIRST (it's the proper tool for finding UI element coordinates). 2) screen_process ONLY as a backup or for visual verification with verify_x/verify_y. Never use screen_process as the primary coordinate-finding tool — it gives approximate descriptions, not precise coordinates. The workflow should be: screen_locate → move cursor → screen_process with verify_x/verify_y for visual verification → click.",
+      "updated": "2026-06-26",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "verify_after_opening_app": {
+      "value": "Always verify after opening any app using screen_process. Wait for the app to fully load (use 5-10 seconds delay or more for heavier apps like YouTube/Unigram) before calling screen_process to confirm the app is actually open and visible. Never assume an app opened successfully just because the tool returned success.",
+      "updated": "2026-06-28",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "screen_process_priority": {
+      "value": "ALWAYS prefer screen_process for finding coordinates and visual analysis. The screen_find and screen_describe tools (which use Moondream VLM) are extremely slow and unreliable on this PC and often time out. Only use screen_find/screen_describe as a last resort backup. Default workflow: 1) screen_process to see the screen, 2) screen_process to find coordinates, 3) verify cursor with verify_x/verify_y, 4) click.",
+      "updated": "2026-06-28",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "tts_natural_output_rule": {
+      "value": "Never use emojis, asterisks, hashtags, or bullet points in responses. Use short, natural sentences and simple paragraph spacing to ensure edge-tts sounds human and natural.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "moondream_3_grounding_protocol": {
+      "value": "To get correct coordinates from Moondream 3 Preview, use clear and detailed referring expressions (precise descriptions of the object). Avoid prompt tricks as the model has native grounding capabilities. Use specific descriptions to ensure accuracy.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "screen_locate_prompting_rule": {
+      "value": "To get accurate coordinates from the screen_locate tool (Moondream 3 Preview), always use a highly detailed and precise referring expression. Describe the element's exact visual characteristics and its specific position on the screen rather than using a simple or generic prompt.",
+      "updated": "2026-06-30",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "response_speed_protocol": {
+      "value": "Always respond and execute actions at maximum speed. Follow the 'See -> Locate -> Act -> Verify' workflow without unnecessary delays. Prioritize tool execution in a continuous chain, minimizing pauses between steps. Avoid waiting or verification delays unless explicitly required for accuracy.",
+      "updated": "2026-07-01",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "verify_before_action": {
+      "value": "Before proceeding to any next step, task, or tool call that involves interaction with the screen (clicking, typing, etc.), I must FIRST perform a screen_process to verify the current UI state. Only after confirming the expected state on the screen should I proceed to the next step.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "moondream_coordinate_prompting": {
+      "value": "Jab bhi screen_locate ya moondream 3 preview ka use karna ho, toh prompt direct aur specific object-oriented hona chahiye. 'Bounding box' ke bajaye 'object' ka naam lein aur 'locate' ya 'where is' jaisa clear natural language prompt use karein. Isse model precise center coordinates return karega.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "ui_interaction_workflow": {
+      "value": "Jab bhi kisi UI element ke saath interact karna ho, ye 4 steps follow karein: 1. screen_locate se element ke exact coordinates find karein. 2. computer_control(action='move') ka use karke mouse ko un coordinates par move karein. 3. screen_process (ya screenshot analyze karke) verify karein ki cursor sahi jagah par hai. 4. agar verification pass ho jaye, tabhi computer_control(action='click') perform karein.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "mcp_playwright_usage_protocol": {
+      "value": "Always prefer mcp_playwright_ tools for all browser-based tasks. Do not use computer_control (mouse/keyboard) for browser interactions unless absolutely necessary. First step is always taking a page snapshot for element identification, then using mcp_playwright_ actions to interact.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "browser_control_update": {
+      "value": "Always use screen_locate to get precise coordinates for any browser interaction. Do not use mcp_playwright tools when a browser window is already open. Use vision and computer_control (move and click) to interact with the existing browser directly. Always follow the See, Locate, Move, Click, Wait, Verify workflow.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    },
+    "scrolling_protocol": {
+      "value": "Always use pageup and pagedown keys for scrolling up and down in any window, as standard mouse scrolling may be unreliable.",
+      "updated": "2026-07-15",
+      "history": [],
+      "source": "manual",
+      "score": 1.0,
+      "access_count": 0
+    }
+  }
+}

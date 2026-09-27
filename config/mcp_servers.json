@@ -1,0 +1,1045 @@
+{
+    "fetch": {
+        "enabled": false,
+        "category": "Web",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@yawlabs/fetch-mcp@latest"
+        ],
+        "description": "Fetch web pages \u2014 HTML to markdown, reader mode, metadata, RSS, sitemaps",
+        "_tools": {
+            "http_put": {
+                "enabled": false
+            },
+            "http_post": {
+                "enabled": false
+            },
+            "http_patch": {
+                "enabled": false
+            },
+            "http_options": {
+                "enabled": false
+            },
+            "http_head": {
+                "enabled": false
+            },
+            "http_get": {
+                "enabled": false
+            },
+            "http_delete": {
+                "enabled": false
+            },
+            "fetch_sitemap": {
+                "enabled": false
+            },
+            "fetch_robots": {
+                "enabled": false
+            },
+            "fetch_reader": {
+                "enabled": false
+            },
+            "fetch_meta": {
+                "enabled": false
+            },
+            "fetch_links": {
+                "enabled": false
+            },
+            "fetch_html_to_text": {
+                "enabled": false
+            },
+            "fetch_html_to_markdown": {
+                "enabled": false
+            },
+            "fetch_feed": {
+                "enabled": false
+            }
+        }
+    },
+    "context7": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@upstash/context7-mcp"
+        ],
+        "description": "Latest library docs \u2014 fixes API hallucination",
+        "env": {
+            "CONTEXT7_API_KEY": "YOUR_API_KEY_HERE"
+        },
+        "_tools": {
+            "query-docs": {
+                "enabled": false
+            },
+            "resolve-library-id": {
+                "enabled": false
+            }
+        }
+    },
+    "filesystem": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/server-filesystem",
+            "C:\\Alex\\Alex version 0.2 ( improved memory system)"
+        ],
+        "description": "File system access \u2014 read, write, list, search"
+    },
+    "playwright": {
+        "enabled": true,
+        "category": "Browser",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@playwright/mcp@latest",
+            "--caps=vision,pdf,devtools,network,testing",
+            "--cdp-endpoint=http://127.0.0.1:9222"
+        ],
+        "description": "Browser automation via CDP \u2014 connects to existing Chrome (port 9222)"
+    },
+    "chrome_devtools": {
+        "enabled": false,
+        "category": "Browser",
+        "command": "npx",
+        "args": [
+            "-y",
+            "chrome-devtools-mcp@latest",
+            "--wsEndpoint=ws://127.0.0.1:9222/devtools/browser/",
+            "--no-usage-statistics"
+        ],
+        "description": "Chrome DevTools \u2014 connects to existing Chrome via chrome://inspect (no flag needed)"
+    },
+    "stealth_chrome": {
+        "enabled": false,
+        "category": "Browser",
+        "command": "uvx",
+        "args": [
+            "mcp-stealth-chrome@latest"
+        ],
+        "env": {
+            "CHROME_PATH": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "description": "Stealth Chrome \u2014 110 tools, bot-detection bypass, Turnstile & captcha solving"
+    },
+    "winapp": {
+        "enabled": true,
+        "category": "Desktop",
+        "command": "npx",
+        "args": [
+            "-y",
+            "winapp-mcp"
+        ],
+        "description": "Windows desktop app automation via UI Automation"
+    },
+    "sequential_thinking": {
+        "enabled": false,
+        "category": "AI & Thinking",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/server-sequential-thinking"
+        ],
+        "description": "Step-by-step reasoning and structured thinking"
+    },
+    "github": {
+        "enabled": true,
+        "category": "Version Control",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/server-github"
+        ],
+        "description": "GitHub API \u2014 repos, issues, PRs, code search",
+        "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "REDACTED_GITHUB_PAT"
+        },
+        "headers": null
+    },
+    "brave_search": {
+        "enabled": false,
+        "category": "Web Search",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/server-brave-search"
+        ],
+        "description": "Web search via Brave \u2014 free API key from api.search.brave.com",
+        "env": {
+            "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY_HERE"
+        }
+    },
+    "postgres": {
+        "enabled": false,
+        "category": "Database",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/server-postgres"
+        ],
+        "description": "PostgreSQL database queries \u2014 needs database URL in env",
+        "env": {
+            "DATABASE_URL": "postgresql://user:pass@localhost:5432/dbname"
+        }
+    },
+    "sqlite": {
+        "enabled": false,
+        "category": "Database",
+        "command": "uvx",
+        "args": [
+            "mcp-server-sqlite",
+            "--db-path",
+            "./memory/conversations.db"
+        ],
+        "description": "SQLite database access \u2014 query local conversations.db"
+    },
+    "minimax": {
+        "enabled": false,
+        "category": "AI & Media",
+        "command": "npx",
+        "args": [
+            "-y",
+            "minimax-mcp"
+        ],
+        "description": "Text-to-Speech, image & video generation",
+        "env": {
+            "MINIMAX_API_KEY": "YOUR_MINIMAX_API_KEY_HERE",
+            "MINIMAX_GROUP_ID": "YOUR_MINIMAX_GROUP_ID_HERE"
+        }
+    },
+    "exa_search": {
+        "enabled": false,
+        "category": "Web Search",
+        "command": "npx",
+        "args": [
+            "-y",
+            "exa-mcp-server"
+        ],
+        "description": "AI-powered search engine",
+        "env": {
+            "EXA_API_KEY": "YOUR_EXA_API_KEY_HERE"
+        }
+    },
+    "spotify": {
+        "enabled": false,
+        "category": "Web",
+        "url": "https://spotify.server.open-mcp.org/latest/mcp",
+        "transport": "streamableHttp",
+        "description": "Hosted Spotify MCP (open-mcp.org) \u2014 OAuth login in browser, no developer app or Client ID needed"
+    },
+    "spotify_local": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@striderlabs/mcp-spotify"
+        ],
+        "description": "MCP server: @striderlabs/mcp-spotify (needs SPOTIFY_CLIENT_ID env + dashboard app)"
+    },
+    "pdf": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "mcp-pdf"
+        ],
+        "description": "MCP server: mcp-pdf"
+    },
+    "educhain-ai-agent-kit": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@iflow-mcp/educhain-ai-agent-kit"
+        ],
+        "description": "MCP server: @iflow-mcp/educhain-ai-agent-kit"
+    },
+    "agent-install": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "agent-install"
+        ],
+        "description": "MCP server: agent-install"
+    },
+    "add": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "add-mcp"
+        ],
+        "description": "MCP server: add-mcp"
+    },
+    "sdk": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@modelcontextprotocol/sdk"
+        ],
+        "description": "MCP server: @modelcontextprotocol/sdk"
+    },
+    "googledrive": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "googledrive",
+        "description": "Search Google Drive, upload and download files, create folders, move and rename items, and manage sharing and file permissions.",
+        "_tools": {
+            "mcp_preview_Arcade_ListApps": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_CheckFileAccess": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_CreateFolder": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_DownloadFile": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_DownloadFileChunk": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_GenerateGoogleFilePickerUrl": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_GetFileTreeStructure": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_ListFilePermissions": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_MoveFile": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_RemoveAllCollaborators": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_RenameFile": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_RevokeFileAccess": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_SearchDrive": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_SearchFiles": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_SetGeneralAccess": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_ShareFile": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_UploadFile": {
+                "enabled": true
+            },
+            "mcp_preview_GoogleDrive_WhoAmI": {
+                "enabled": true
+            }
+        }
+    },
+    "pkobielak/social-superpowers": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "pkobielak/social-superpowers",
+        "description": "Hosted MCP for X/Twitter and Reddit. 12 read-only tools, no API keys, free during beta.",
+        "_tools": {
+            "mcp_preview_reddit-get-post": {
+                "enabled": true
+            },
+            "mcp_preview_reddit-get-posts": {
+                "enabled": true
+            },
+            "mcp_preview_reddit-get-user-comments": {
+                "enabled": true
+            },
+            "mcp_preview_reddit-get-user-posts": {
+                "enabled": true
+            },
+            "mcp_preview_reddit-search": {
+                "enabled": true
+            },
+            "mcp_preview_twitter-news": {
+                "enabled": true
+            },
+            "mcp_preview_twitter-read": {
+                "enabled": true
+            },
+            "mcp_preview_twitter-search": {
+                "enabled": true
+            },
+            "mcp_preview_twitter-thread": {
+                "enabled": true
+            },
+            "mcp_preview_twitter-user-tweets": {
+                "enabled": true
+            }
+        }
+    },
+    "post-pulse/mcp-server": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "post-pulse/mcp-server",
+        "description": "PostPulse is a unified API and integration suite that handles the complexity of social media publishing. Instead of managing individual platform audits and breaking tokens, developers use PostPulse as",
+        "_tools": {
+            "mcp_preview_list_accounts": {
+                "enabled": true
+            },
+            "mcp_preview_list_chats": {
+                "enabled": true
+            },
+            "mcp_preview_upload_media": {
+                "enabled": true
+            },
+            "mcp_preview_schedule_post": {
+                "enabled": true
+            }
+        }
+    },
+    "io.github.lanternrow/facebook-pages-mcp": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "facebook-pages-mcp"
+        ],
+        "description": "Facebook Pages organic analytics, post management, and insights via Meta Graph API v25.0.",
+        "env": {
+            "FB_PAGE_ACCESS_TOKEN": "EAAVI7ZCh62MgBSdZBPWPPs7T2wrUYBUnVj2vkaD6OAglhiNq9QCRVB50UiSCXbBoQdt2yFpQZCDLzArOVLQtoign4Riu9uA5cnRXDiOTl74NYcyKzGThs47AmBZBpFGAycgS6Q3DhJyzdsceSebdk6H1SAXnMJTWwq0fHGjwZBsX2Yagpobd0FgVtMZAsyNrveFzTFc6d9JbppQBcxx1lrC7ENMA0trRGFBjkemNcGZBTBqW5xGzY8nxSfJWGlH0UnZA9hJk68c4nsirgpCaBdZB4",
+            "FB_PAGE_ID": "2109108800489792"
+        },
+        "_tools": {
+            "mcp_preview_get_page_info": {
+                "enabled": true
+            },
+            "mcp_preview_get_page_insights": {
+                "enabled": true
+            },
+            "mcp_preview_get_published_posts": {
+                "enabled": true
+            },
+            "mcp_preview_get_post_insights": {
+                "enabled": true
+            },
+            "mcp_preview_get_post_comments": {
+                "enabled": true
+            },
+            "mcp_preview_get_video_insights": {
+                "enabled": true
+            },
+            "mcp_preview_get_page_feed": {
+                "enabled": true
+            },
+            "mcp_preview_create_post": {
+                "enabled": true
+            },
+            "mcp_preview_refresh_token_info": {
+                "enabled": true
+            }
+        },
+        "headers": null
+    },
+    "gmail": {
+        "enabled": true,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "gmail",
+        "description": "Read, search, and send Gmail messages. Manage drafts, threads, and labels; reply, forward, archive, trash, report spam, and triage your inbox.",
+        "_tools": {
+            "mcp_preview_Arcade_ListApps": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ArchiveEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ChangeEmailLabels": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ChangeThreadLabels": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_CreateLabel": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_DeleteDraftEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_DeleteLabel": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ForwardEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_GetEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_GetThread": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListDraftEmails": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListEmailAttachmentMetadata": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListEmails": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListEmailsByHeader": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListLabels": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ListThreads": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ReplyToEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_ReportSpam": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_SearchEmailsByQuery": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_SearchThreads": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_SendDraftEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_SendEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_SetThreadTrashStatus": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_TrashEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_TriageEmails": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_UnsubscribeFromEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_UpdateDraftEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_UpdateLabel": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_WhoAmI": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_WriteDraftEmail": {
+                "enabled": true
+            },
+            "mcp_preview_Gmail_WriteDraftReplyEmail": {
+                "enabled": true
+            }
+        }
+    },
+    "jina": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "jina",
+        "description": "AI-powered search and retrieval platform. Search the web, read page content, extract structured data, and ground AI responses.",
+        "_tools": {
+            "mcp_preview_show_api_key": {
+                "enabled": true
+            },
+            "mcp_preview_primer": {
+                "enabled": true
+            },
+            "mcp_preview_guess_datetime_url": {
+                "enabled": true
+            },
+            "mcp_preview_capture_screenshot_url": {
+                "enabled": true
+            },
+            "mcp_preview_read_url": {
+                "enabled": true
+            },
+            "mcp_preview_search_web": {
+                "enabled": true
+            },
+            "mcp_preview_search_web_deep": {
+                "enabled": true
+            },
+            "mcp_preview_expand_query": {
+                "enabled": true
+            },
+            "mcp_preview_search_arxiv": {
+                "enabled": true
+            },
+            "mcp_preview_search_ssrn": {
+                "enabled": true
+            },
+            "mcp_preview_search_jina_blog": {
+                "enabled": true
+            },
+            "mcp_preview_search_images": {
+                "enabled": true
+            },
+            "mcp_preview_parallel_search_web": {
+                "enabled": true
+            },
+            "mcp_preview_parallel_search_arxiv": {
+                "enabled": true
+            },
+            "mcp_preview_parallel_search_ssrn": {
+                "enabled": true
+            },
+            "mcp_preview_parallel_read_url": {
+                "enabled": true
+            },
+            "mcp_preview_classify_text": {
+                "enabled": true
+            },
+            "mcp_preview_sort_by_relevance": {
+                "enabled": true
+            },
+            "mcp_preview_deduplicate_strings": {
+                "enabled": true
+            },
+            "mcp_preview_deduplicate_images": {
+                "enabled": true
+            },
+            "mcp_preview_search_bibtex": {
+                "enabled": true
+            },
+            "mcp_preview_extract_pdf": {
+                "enabled": true
+            }
+        }
+    },
+    "pinkpixel-dev/web-scout-mcp": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "pinkpixel-dev/web-scout-mcp",
+        "description": "Search the web and extract clean, readable text from webpages. Process multiple URLs at once to speed up research with reliable throttling and error handling. Quickly compile sources and summaries for",
+        "_tools": {
+            "mcp_preview_DuckDuckGoWebSearch": {
+                "enabled": true
+            },
+            "mcp_preview_UrlContentExtractor": {
+                "enabled": true
+            }
+        }
+    },
+    "ghostrouter/ghostrouter-web": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "ghostrouter/ghostrouter-web",
+        "description": "Search the live web to retrieve up-to-date information and bypass knowledge cut-offs. Convert any webpage into clean, readable Markdown while navigating around captchas and complex layouts. Access rea",
+        "_tools": {
+            "mcp_preview_web_search": {
+                "enabled": true
+            },
+            "mcp_preview_read_webpage": {
+                "enabled": true
+            }
+        }
+    },
+    "@ericthered926/duckduckgo-mcp-server": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@ericthered926/duckduckgo-mcp-server"
+        ],
+        "description": "A Model Context Protocol (MCP) server for DuckDuckGo web and news search",
+        "_tools": {
+            "mcp_preview_duckduckgo_web_search": {
+                "enabled": true
+            },
+            "mcp_preview_duckduckgo_news_search": {
+                "enabled": true
+            }
+        }
+    },
+    "keenable/web-search": {
+        "enabled": false,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "keenable/web-search",
+        "description": "Docs: https://docs.keenable.ai/mcp-server\n\nKeenable is a free, remote MCP server that gives agents access to the web index. Search the web with ranked results and date/site filters, then fetch any ind",
+        "_tools": {
+            "mcp_preview_search_web_pages": {
+                "enabled": true
+            },
+            "mcp_preview_fetch_page_content": {
+                "enabled": true
+            }
+        }
+    },
+    "exa-mcp-server": {
+        "enabled": false,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "exa-mcp-server"
+        ],
+        "description": "Connect AI agents to Exa for web search, content fetching, and multi-step research.",
+        "_tools": {
+            "mcp_preview_web_search_exa": {
+                "enabled": true
+            },
+            "mcp_preview_web_fetch_exa": {
+                "enabled": true
+            }
+        }
+    },
+    "io.github.microsoft/playwright-mcp": {
+        "enabled": true,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "@playwright/mcp"
+        ],
+        "description": "Playwright Tools for MCP",
+        "_tools": {
+            "mcp_preview_browser_close": {
+                "enabled": true
+            },
+            "mcp_preview_browser_resize": {
+                "enabled": true
+            },
+            "mcp_preview_browser_console_messages": {
+                "enabled": true
+            },
+            "mcp_preview_browser_handle_dialog": {
+                "enabled": true
+            },
+            "mcp_preview_browser_evaluate": {
+                "enabled": true
+            },
+            "mcp_preview_browser_file_upload": {
+                "enabled": true
+            },
+            "mcp_preview_browser_drop": {
+                "enabled": true
+            },
+            "mcp_preview_browser_find": {
+                "enabled": true
+            },
+            "mcp_preview_browser_fill_form": {
+                "enabled": true
+            },
+            "mcp_preview_browser_press_key": {
+                "enabled": true
+            },
+            "mcp_preview_browser_type": {
+                "enabled": true
+            },
+            "mcp_preview_browser_navigate": {
+                "enabled": true
+            },
+            "mcp_preview_browser_navigate_back": {
+                "enabled": true
+            },
+            "mcp_preview_browser_network_requests": {
+                "enabled": true
+            },
+            "mcp_preview_browser_network_request": {
+                "enabled": true
+            },
+            "mcp_preview_browser_run_code_unsafe": {
+                "enabled": true
+            },
+            "mcp_preview_browser_take_screenshot": {
+                "enabled": true
+            },
+            "mcp_preview_browser_snapshot": {
+                "enabled": true
+            },
+            "mcp_preview_browser_click": {
+                "enabled": true
+            },
+            "mcp_preview_browser_drag": {
+                "enabled": true
+            },
+            "mcp_preview_browser_hover": {
+                "enabled": true
+            },
+            "mcp_preview_browser_select_option": {
+                "enabled": true
+            },
+            "mcp_preview_browser_tabs": {
+                "enabled": true
+            },
+            "mcp_preview_browser_wait_for": {
+                "enabled": true
+            }
+        }
+    },
+    "mcp-pdf": {
+        "enabled": true,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "mcp-pdf"
+        ],
+        "description": "A Model Context Protocol server for PDF manipulation and operations",
+        "_tools": {
+            "mcp_preview_open_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_create_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_save_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_close_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_get_pdf_info": {
+                "enabled": true
+            },
+            "mcp_preview_list_form_fields": {
+                "enabled": true
+            },
+            "mcp_preview_fill_form_field": {
+                "enabled": true
+            },
+            "mcp_preview_fill_form_fields": {
+                "enabled": true
+            },
+            "mcp_preview_get_form_values": {
+                "enabled": true
+            },
+            "mcp_preview_create_text_field": {
+                "enabled": true
+            },
+            "mcp_preview_flatten_form": {
+                "enabled": true
+            },
+            "mcp_preview_add_text": {
+                "enabled": true
+            },
+            "mcp_preview_add_image": {
+                "enabled": true
+            },
+            "mcp_preview_add_annotation": {
+                "enabled": true
+            },
+            "mcp_preview_add_watermark": {
+                "enabled": true
+            },
+            "mcp_preview_modify_metadata": {
+                "enabled": true
+            },
+            "mcp_preview_get_pages": {
+                "enabled": true
+            },
+            "mcp_preview_merge_pdfs": {
+                "enabled": true
+            },
+            "mcp_preview_split_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_rotate_page": {
+                "enabled": true
+            },
+            "mcp_preview_delete_pages": {
+                "enabled": true
+            },
+            "mcp_preview_extract_pages": {
+                "enabled": true
+            },
+            "mcp_preview_add_visual_signature": {
+                "enabled": true
+            },
+            "mcp_preview_create_signature_field": {
+                "enabled": true
+            },
+            "mcp_preview_sign_pdf_digital": {
+                "enabled": true
+            },
+            "mcp_preview_verify_signature": {
+                "enabled": true
+            },
+            "mcp_preview_encrypt_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_decrypt_pdf": {
+                "enabled": true
+            },
+            "mcp_preview_set_permissions": {
+                "enabled": true
+            },
+            "mcp_preview_get_security_info": {
+                "enabled": true
+            },
+            "mcp_preview_extract_text": {
+                "enabled": true
+            },
+            "mcp_preview_extract_images": {
+                "enabled": true
+            },
+            "mcp_preview_export_form_data": {
+                "enabled": true
+            },
+            "mcp_preview_compress_pdf": {
+                "enabled": true
+            }
+        }
+    },
+    "@mcp_factory/canva-mcp-server": {
+        "enabled": true,
+        "category": "Development",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@mcp_factory/canva-mcp-server"
+        ],
+        "description": "MCP server for Canva - manage designs, folders, assets, brand templates, exports, and comments via the Canva Connect API",
+        "_tools": {
+            "mcp_preview_canva_list_users_me": {
+                "enabled": true
+            },
+            "mcp_preview_canva_list_me_profile": {
+                "enabled": true
+            },
+            "mcp_preview_canva_list_designs": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_designs": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_designs": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_designs_pages": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_exports": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_exports": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_folders": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_folders": {
+                "enabled": true
+            },
+            "mcp_preview_canva_update_folders": {
+                "enabled": true
+            },
+            "mcp_preview_canva_delete_folders": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_folders_items": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_folders_move": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_assets": {
+                "enabled": true
+            },
+            "mcp_preview_canva_update_assets": {
+                "enabled": true
+            },
+            "mcp_preview_canva_delete_assets": {
+                "enabled": true
+            },
+            "mcp_preview_canva_list_brand_templates": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_brand_templates": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_brand_templates_dataset": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_autofills": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_autofills": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_designs_comments": {
+                "enabled": true
+            },
+            "mcp_preview_canva_get_comments_replies": {
+                "enabled": true
+            },
+            "mcp_preview_canva_create_comments_replies": {
+                "enabled": true
+            }
+        }
+    },
+    "bbeksh/mcppedia": {
+        "enabled": true,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "bbeksh/mcppedia",
+        "description": "Search, evaluate, and compare 17,000+ MCP servers from the [MCPpedia](https://mcppedia.org) catalog. Every server is scored on **security, maintenance, efficiency, documentation, and compatibility** \u2014",
+        "_tools": {
+            "mcp_preview_search_servers": {
+                "enabled": true
+            },
+            "mcp_preview_get_server_details": {
+                "enabled": true
+            },
+            "mcp_preview_compare_servers": {
+                "enabled": true
+            },
+            "mcp_preview_get_install_config": {
+                "enabled": true
+            },
+            "mcp_preview_get_trending": {
+                "enabled": true
+            },
+            "mcp_preview_get_category_tree": {
+                "enabled": true
+            },
+            "mcp_preview_what_changed": {
+                "enabled": true
+            }
+        }
+    },
+    "naver/captcha": {
+        "enabled": true,
+        "category": "Development",
+        "transport": "smithery",
+        "server_qname": "naver/captcha",
+        "description": "Generate and validate Naver CAPTCHAs (image or voice). Pair with form-submission flows that need a human-presence check; works without Naver login.",
+        "_tools": {
+            "mcp_preview_image_captcha": {
+                "enabled": true
+            },
+            "mcp_preview_voice_captcha": {
+                "enabled": true
+            }
+        }
+    }
+}
