@@ -19,7 +19,7 @@ Personal AI desktop assistant with voice interaction, multi-LLM support, screen 
   
 git clone https://github.com/darkgaming10008-stack/ORTHOS-PRO-v0.1.git  
 cd ORTHOS-PRO-v0.1  
-pip install -r requirements.txt  
+run setup.bat  
 python main.py  
 
   
